@@ -770,5 +770,8 @@
       "working": "Trabalhando… {count, plural, one {# etapa} other {# etapas}}"
     },
     "toggle": "Abrir assistente"
+  },
+  "viewer": {
+    "pageIndicator": "{current} de {total}"
   }
 }
