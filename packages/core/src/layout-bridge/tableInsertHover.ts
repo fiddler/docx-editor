@@ -10,6 +10,8 @@
  * regions don't surface the affordance. A header table only matches
  * when the user is editing the header; a body table only matches when
  * not in any HF edit mode.
+ * @packageDocumentation
+ * @public
  */
 
 import { PAGE_CLASS_NAMES } from '../layout-painter/renderPage';

@@ -6,6 +6,8 @@
  * @experimental Stable enough for the first-party React adapter, but the
  * API may change in minor releases until a third-party adapter validates
  * it. Pin a version range if you depend on this directly.
+ * @packageDocumentation
+ * @public
  */
 
 import type {

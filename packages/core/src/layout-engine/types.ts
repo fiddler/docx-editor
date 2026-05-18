@@ -3,6 +3,8 @@
  *
  * Core types for the paginated layout engine.
  * Converts document blocks + measurements into positioned fragments on pages.
+ * @packageDocumentation
+ * @public
  */
 
 /**

@@ -4,6 +4,8 @@
  * Provides DOM-based position mapping for the LayoutPainter output.
  * Uses the same data-pm-start/data-pm-end attribute pattern as the
  * selection overlay in PagedEditor.
+ * @packageDocumentation
+ * @public
  */
 
 import type { RenderedDomContext, PositionCoordinates } from './types';

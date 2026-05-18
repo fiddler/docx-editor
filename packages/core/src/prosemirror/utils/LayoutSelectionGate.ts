@@ -3,6 +3,8 @@
  *
  * Guards selection rendering until layout is up-to-date.
  * Uses sequenced versioning to prevent stale cursor positions.
+ * @packageDocumentation
+ * @public
  */
 
 type RenderCallback = () => void;

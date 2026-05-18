@@ -7,6 +7,8 @@
  * The deep import `@eigenpal/.../layout-bridge/toFlowBlocks` is part of the
  * public surface (Vue adapter + tests), so the per-domain helpers under
  * ./toFlowBlocks/ are re-exported from here to keep that path stable.
+ * @packageDocumentation
+ * @public
  */
 
 import type { Node as PMNode } from 'prosemirror-model';

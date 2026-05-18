@@ -9,6 +9,8 @@
  * from paragraphs. Header/footer rendering lives in ./renderPage/headerFooter.ts,
  * footnote area rendering in ./renderPage/footnotes.ts, and the multi-page
  * virtualization / IntersectionObserver layer in ./renderPage/virtualization.ts.
+ * @packageDocumentation
+ * @public
  */
 
 import type {

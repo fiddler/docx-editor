@@ -3,6 +3,8 @@
  *
  * Provides text measurement utilities for the layout engine.
  * Uses Canvas API for accurate, cached measurements.
+ * @packageDocumentation
+ * @public
  */
 
 // Core measurement functions

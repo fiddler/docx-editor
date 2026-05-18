@@ -7,6 +7,8 @@
  *
  * DOM elements are tagged with data-pm-start and data-pm-end attributes,
  * enabling binary search to find exact character positions.
+ * @packageDocumentation
+ * @public
  */
 
 import { findBodyPmSpans } from './findBodyPmSpans';

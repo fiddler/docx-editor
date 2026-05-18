@@ -5,6 +5,8 @@
  * The named exports below are the public contract for adapter authors,
  * but the API is still evolving and may change in minor releases until
  * a third-party adapter validates it.
+ * @packageDocumentation
+ * @public
  */
 
 // PM doc → flow blocks
