@@ -312,6 +312,13 @@ export type ParagraphAttrs = {
   listMarkerFontFamily?: string; // from numbering level rPr (w:rFonts)
   listMarkerFontSize?: number; // from numbering level rPr, in points
   listMarkerSuffix?: 'tab' | 'space' | 'nothing'; // §17.9.25 w:suff; default 'tab'
+  /**
+   * Tracked-change state of the list numbering itself. When a list is applied
+   * (or removed) under suggesting mode, the marker paints in the insertion /
+   * deletion color so an inserted list item's number reads as part of the
+   * suggestion, matching Word. `undefined` = numbering is not a pending change.
+   */
+  listMarkerRevision?: 'ins' | 'del';
   /** Document-wide `w:defaultTabStop` in twips (§17.6.13). Default 720. */
   defaultTabStopTwips?: number;
   // Default font for empty paragraphs (from style's rPr / pPr/rPr)

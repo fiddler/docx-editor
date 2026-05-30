@@ -486,7 +486,8 @@ export function renderParagraphFragment(
         getListMarkerInlineWidth(block),
         doc,
         fontFamily,
-        fontSize
+        fontSize,
+        block.attrs.listMarkerRevision
       );
       lineEl.insertBefore(marker, lineEl.firstChild);
     }
@@ -532,7 +533,8 @@ function renderListMarker(
   minWidth: number,
   doc: Document,
   fontFamily: string,
-  fontSize: number
+  fontSize: number,
+  revision?: 'ins' | 'del'
 ): HTMLElement {
   const span = doc.createElement('span');
   span.className = 'layout-list-marker';
@@ -543,5 +545,13 @@ function renderListMarker(
   span.style.display = 'inline-block';
   span.style.minWidth = `${minWidth}px`;
   span.textContent = marker;
+  // A list whose numbering is a pending tracked change paints its marker in the
+  // revision color (inline — painter output isn't reliably under .ep-root CSS).
+  if (revision === 'ins') {
+    span.style.color = '#2e7d32';
+  } else if (revision === 'del') {
+    span.style.color = '#c62828';
+    span.style.textDecoration = 'line-through';
+  }
   return span;
 }

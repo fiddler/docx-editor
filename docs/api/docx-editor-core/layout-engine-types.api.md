@@ -370,6 +370,7 @@ export type ParagraphAttrs = {
     listMarkerFontFamily?: string;
     listMarkerFontSize?: number;
     listMarkerSuffix?: 'tab' | 'space' | 'nothing';
+    listMarkerRevision?: 'ins' | 'del';
     defaultTabStopTwips?: number;
     defaultFontSize?: number;
     defaultFontFamily?: string;

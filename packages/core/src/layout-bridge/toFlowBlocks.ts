@@ -274,6 +274,21 @@ function convertParagraphAttrs(
   if (pmAttrs.pPrIns) attrs.pPrIns = pmAttrs.pPrIns;
   if (pmAttrs.pPrDel) attrs.pPrDel = pmAttrs.pPrDel;
 
+  // List-marker tracked-change state. When the numbering itself is a pending
+  // revision the painter colors the marker (Word shows an inserted list item's
+  // number in the change color). The numbering counts as inserted when the
+  // paragraph mark was inserted (pPrIns) or a pPrChange added it (its prior
+  // snapshot had no numId); deleted when the paragraph mark is deleted.
+  if (pmAttrs.numPr) {
+    const pPrChange = pmAttrs.pPrChange as Array<{
+      previousFormatting?: { numPr?: unknown };
+    }> | null;
+    const numberingAdded =
+      Array.isArray(pPrChange) && pPrChange.some((c) => !c?.previousFormatting?.numPr);
+    if (pmAttrs.pPrDel) attrs.listMarkerRevision = 'del';
+    else if (pmAttrs.pPrIns || numberingAdded) attrs.listMarkerRevision = 'ins';
+  }
+
   return attrs;
 }
 
