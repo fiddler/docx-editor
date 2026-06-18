@@ -181,6 +181,7 @@ export interface DocumentBody {
 
 // @public
 export interface DocumentSettings {
+    defaultTableStyle?: string;
     defaultTabStop: number;
 }
 
